@@ -1,0 +1,65 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="order-form">
+            <h2>ORDER-FORM</h2>
+            <form id="orderForm">
+                <label for="name">Name and Surname</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="promo">Promo</label>
+                <div class="promo-wrapper">
+                    <input type="text" id="promo" name="promo">
+                    <button type="button" id="applyPromo">Apply</button>
+                </div>
+
+              
+
+                <label for="phone">Cell phone</label>
+                <div class="phone-wrapper">
+                    <select id="countryCode" name="countryCode">
+                        <option value="+91">+91</option>
+                        <option value="+1">+1</option>
+                        <option value="+7">+7</option>
+                    </select>
+                    <input type="number" id="phone" name="phone" required>
+                </div>
+
+                <label for="payment">Payment</label>
+                <select id="payment" name="payment">
+                    <option value="visa">Phone Pe</option>
+                    <option value="visa">UPI</option>
+                    <option value="visa">Debit/credit card</option>   
+
+                        
+                    </option>
+                    
+                </select>
+
+                <div class="card-info">
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" required>
+                </div>
+
+                <div class="remember-card">
+                    <input type="checkbox" id="rememberCard" name="rememberCard">
+                    <label for="rememberCard">Remember card information</label>
+                </div>
+
+                <button type="submit" class="purchase-button">Purchase (250)</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

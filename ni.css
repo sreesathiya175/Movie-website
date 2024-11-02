@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, rgba(255, 159, 95, 0.8), rgba(254, 180, 123, 0.8)), 
+                url('mon.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: hwb(33 54% 37% / 0.89);
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+    animation: fadeIn 1.2s ease-in-out;
+    max-width: 600px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1, h2 {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.date-time-picker {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeIn 1.2s ease-in-out 0.5s;
+}
+
+.date-time-picker label {
+    margin-right: 10px;
+    color: #333;
+}
+
+input[type="date"],
+input[type="time"] {
+    padding: 5px;
+    border: 2px solid #feb47b;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #da1414;
+    outline: none;
+}
+
+.seat-container {
+    display: inline-block;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.seat:hover {
+    transform: scale(1.1);
+}
+
+.seat.selected {
+    background-color: #17f12a;
+    animation: bounceIn 0.3s ease-in-out;
+}
+
+.seat.allocated {
+    background-color: #fd1616;
+    cursor: not-allowed;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.selection-summary {
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out 0.5s;
+}
+
+#selected-seats, #selected-date-time {
+    font-weight: bold;
+    color: #1f1d1c;
+}
+
+#book-seats {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0c1db4;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1s ease-in-out 0.8s;
+}
+
+#book-seats:hover {
+    background-color: #feb47b;
+}
+
+.booking-status {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInUp 1s ease-in-out 1s;
+}
+

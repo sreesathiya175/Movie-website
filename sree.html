@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Seat Booking</title>
+    <link rel="stylesheet" href="ni.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Theater Seat Booking</h1>
+        
+        <div class="date-time-picker">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <div class="seat-container">
+            <div class="seat-row">
+                <div class="seat" data-seat="A1"></div>
+                <div class="seat" data-seat="A2"></div>
+                <div class="seat allocated" data-seat="A3"></div>
+                <div class="seat" data-seat="A4"></div>
+                <div class="seat" data-seat="A5"></div>
+                <div class="seat" data-seat="A6"></div>
+                <div class="seat allocated" data-seat="A7"></div>
+            </div>
+            <div class="seat-row">
+                <div class="seat" data-seat="B1"></div>
+                <div class="seat allocated" data-seat="B2"></div>
+                <div class="seat" data-seat="B3"></div>
+                <div class="seat allocated" data-seat="B4"></div>
+                <div class="seat" data-seat="B5"></div>
+                <div class="seat" data-seat="B6"></div>
+                <div class="seat" data-seat="B7"></div>
+            </div>
+
+            <div class="seat-row">
+                <div class="seat" data-seat="C1"></div>
+                <div class="seat allocated" data-seat="C2"></div>
+                <div class="seat" data-seat="C3"></div>
+                <div class="seat" data-seat="C4"></div>
+                <div class="seat allocated" data-seat="C5"></div>
+                <div class="seat" data-seat="C6"></div>
+                <div class="seat" data-seat="C7"></div>
+            </div>
+
+            <div class="seat-row">
+                <div class="seat" data-seat="D1"></div>
+                <div class="seat" data-seat="D2"></div>
+                <div class="seat allocated" data-seat="D3"></div>
+                <div class="seat" data-seat="D4"></div>
+                <div class="seat" data-seat="D5"></div>
+                <div class="seat" data-seat="D6"></div>
+                <div class="seat" data-seat="D7"></div>
+            </div>
+            
+        </div>
+
+        <div class="selection-summary">
+            <h2>Selected Seats:</h2>
+            <p id="selected-seats">None</p>
+            <p id="selected-date-time">Date & Time: Not selected</p>
+        </div>
+
+        <button id="book-seats">Book Seats</button>
+       
+
+        <div class="booking-status" id="booking-status">
+            <!-- Booking status will be displayed here -->
+        </div>
+    </div>
+
+    <script src="thi.js"></script>
+</body>
+</html>
+
